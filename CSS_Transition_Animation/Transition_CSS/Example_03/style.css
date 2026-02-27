@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.picture {
+    width: 200px;
+    height: auto;
+    transition: transform 0.8s ease-in-out; 
+    cursor: pointer;
+    
+}
+
+ 
+.picture:hover {
+    transform: rotate(360deg) scale(1.5);
+}

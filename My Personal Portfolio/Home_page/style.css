@@ -1,0 +1,786 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00eeff;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.logo span {
+    background: var(--main-color);
+    color: var(--bg-color);
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.navbar a {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-left: 2rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9%;
+    height: 100vh;
+}
+
+.home-content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.home-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0.5rem 0;
+}
+
+.home-content h3 span {
+    color: var(--main-color);
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: var(--main-color);
+    margin: 2rem 1rem 2rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.2rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+/* Image section with glow effect */
+.home-img {
+    position: relative;
+    width: 32vw;
+    height: 32vw;
+}
+
+.glowing-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50% 50% 0 0; /* Pill shape effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glowing-circle::before {
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background: var(--main-color);
+    border-radius: 50%;
+    filter: blur(50px);
+    opacity: 0.5;
+}
+
+.home-img img {
+    width: 100%;
+    border-radius: 150px; /* Adjust based on your photo */
+    position: relative;
+    z-index: 1;
+    border: 4px solid var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* About Section Styles */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 10rem 9% 2rem;
+    background: var(--bg-color);
+}
+
+.about-img .circle-box {
+    position: relative;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Photo eka wata thiyena neon glow eka */
+.about-img .circle-box::before {
+    content: '';
+    position: absolute;
+    width: 105%;
+    height: 105%;
+    border-radius: 50%;
+    background: var(--main-color);
+    filter: blur(20px);
+    opacity: 0.6;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    border: 3px solid var(--main-color);
+}
+
+.about-content {
+    flex: 1 1 30rem;
+}
+
+.heading {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Bottom Black Box Section */
+.focus-container {
+    width: 100%;
+    background: #051622; /* Darker background */
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 238, 255, 0.2);
+    margin-top: 4rem;
+}
+
+.focus-text h3 span {
+    color: var(--main-color);
+}
+
+.focus-text h4 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.focus-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+
+.item i {
+    color: var(--main-color);
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.skills {
+    padding: 10rem 9% 2rem;
+    background: var(--second-bg-color);
+}
+
+.skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.skills-column {
+    flex: 1 1 40rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+}
+
+/* Technical Bar Styles */
+.skills-box .progress {
+    padding: 1rem 0;
+}
+
+.skills-box .progress h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.7rem;
+}
+
+.skills-box .progress h3 i {
+    color: var(--main-color);
+    margin-right: 10px;
+}
+
+.skills-box .progress .bar {
+    height: 2.5rem;
+    width: 100%;
+    background: #000;
+    border-radius: .6rem;
+    margin-top: .5rem;
+    padding: .5rem;
+}
+
+.skills-box .progress .bar span {
+    display: block;
+    height: 100%;
+    background: var(--main-color);
+    border-radius: .3rem;
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* Individual Bar Widths */
+.progress:nth-child(1) .bar span { width: 80%; }
+.progress:nth-child(2) .bar span { width: 70%; }
+.progress:nth-child(3) .bar span { width: 65%; }
+.progress:nth-child(4) .bar span { width: 75%; }
+
+/* Circular Progress Styles */
+.radial-bars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.radial-bar {
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.radial-bar svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 120px;
+}
+
+.progress-bar {
+    stroke-width: 10;
+    stop-color: black;
+    fill: transparent;
+    stroke: #000;
+}
+
+.path {
+    stroke-width: 10;
+    stroke: var(--main-color);
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 5px var(--main-color));
+}
+
+/* Circular Animations */
+.path-1 { animation: animate-path1 1s 1s linear forwards; } /* 60% */
+.path-2 { animation: animate-path2 1s 1s linear forwards; } /* 90% */
+.path-3 { animation: animate-path3 1s 1s linear forwards; } /* 50% */
+
+@keyframes animate-path1 { 100% { stroke-dashoffset: 200; } }
+@keyframes animate-path2 { 100% { stroke-dashoffset: 50; } }
+@keyframes animate-path3 { 100% { stroke-dashoffset: 250; } }
+
+.percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+
+.projects {
+    padding: 10rem 9% 2rem;
+    background: var(--bg-color);
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.project-box {
+    position: relative;
+    border-radius: 2rem;
+    background: var(--second-bg-color);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    transition: .5s ease;
+}
+
+.project-box:hover {
+    transform: translateY(-10px);
+    border: 1px solid var(--main-color);
+}
+
+.project-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.project-layer {
+    padding: 2rem;
+    text-align: center;
+}
+
+.project-layer h4 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+/* GitHub Button with Neon Glow */
+.btn-project {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--main-color);
+    border-radius: 2.5rem;
+    color: var(--bg-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 0 1.5rem var(--main-color);
+    transition: .3s ease;
+    text-decoration: none;
+}
+
+.btn-project:hover {
+    box-shadow: none;
+    transform: scale(1.05);
+}
+
+/* Tablet and Phone Responsive */
+@media (max-width: 991px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.assignments {
+    padding: 10rem 9% 5rem;
+    background: var(--bg-color);
+    text-align: center;
+}
+
+.assignments-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Row ekakata items 4k */
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.assignment-box {
+    background: transparent;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.icon-layer {
+    background: #000; /* Icon eke background eka kalu pata */
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    transition: .5s ease;
+}
+
+.icon-layer img {
+    width: 100px; /* Icon size eka */
+    height: auto;
+    /* Neon gradient effect eka wage penna filter danna puluwan */
+    filter: drop-shadow(0 0 5px var(--main-color));
+}
+
+.assignment-box h4 {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+/* Hover effect */
+.assignment-box:hover .icon-layer {
+    border: 1px solid var(--main-color);
+    box-shadow: 0 0 1.5rem var(--main-color);
+    transform: scale(1.05);
+}
+
+.assignment-box:hover h4 {
+    color: #fff;
+    text-shadow: 0 0 10px var(--main-color);
+}
+
+/* Responsive adjustment */
+@media (max-width: 1200px) {
+    .assignments-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .assignments-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    .assignments-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+.gallery {
+    padding: 10rem 9% 5rem;
+    background: var(--second-bg-color); /* Background eka wenas kara phedili wenna */
+    text-align: center;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+    align-items: start;
+}
+
+.gallery-box {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: .5s ease;
+}
+
+.gallery-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: .5s ease;
+}
+
+/* Hover Effect: Mouse eka genichchama photo eka zoom wenawa saha neon border ekak enawa */
+.gallery-box:hover {
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 2rem var(--main-color);
+    transform: translateY(-5px);
+}
+
+.gallery-box:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+/* Screenshot eke thiyena widiyata thunweni photo eka center wenna danna puluwan */
+@media (min-width: 992px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); /* Palaweni deka eka langa */
+    }
+    .gallery-box:nth-child(3) {
+        grid-column: span 2; /* Thunweni photo eka pahalin lokuwata penna */
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: 1fr; /* Phone ekedi okkoma yata yata */
+    }
+    .gallery-box:nth-child(3) {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.contact {
+    padding: 10rem 9% 5rem;
+    background: var(--bg-color);
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form {
+    max-width: 80rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-group .input-box {
+    width: 49%;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+    border: 1px solid transparent;
+}
+
+.contact form .input-box input:focus,
+.contact form textarea:focus {
+    border: 1px solid var(--main-color);
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+/* Footer & Info Items */
+.contact-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.info-item i {
+    font-size: 1.8rem;
+    color: var(--main-color);
+}
+
+.info-item span {
+    font-size: 1.1rem;
+}
+
+/* Neon Send Button */
+.btn-send {
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1.5rem var(--main-color);
+    font-size: 1.3rem;
+    color: var(--bg-color);
+    letter-spacing: .1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .5s ease;
+    border: none;
+    align-self: flex-end;
+}
+
+.btn-send:hover {
+    box-shadow: none;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact form .input-group .input-box {
+        width: 100%;
+    }
+    .contact-footer {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .btn-send {
+        width: 100%;
+    }
+}
+
+
+
+
+

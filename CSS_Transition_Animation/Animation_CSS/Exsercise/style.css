@@ -1,0 +1,13 @@
+.tittle{
+    animation: fadein 3s infinite;
+    
+}
+@keyframes fadein{
+    from{ opacity: 0;
+
+    } 
+    to{opacity: 100%;
+
+    }
+
+}

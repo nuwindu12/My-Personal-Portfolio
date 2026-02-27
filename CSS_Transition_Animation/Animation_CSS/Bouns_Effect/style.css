@@ -1,0 +1,18 @@
+.ball{
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    animation: moveball 2s infinite;
+    animation-direction: alternate;
+    background: red;
+
+}
+@keyframes moveball{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(300px);
+    }
+}
+

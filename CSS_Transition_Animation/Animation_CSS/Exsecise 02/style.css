@@ -1,0 +1,53 @@
+/* ===== Slider Container ===== */
+.slider {
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Slide Track ===== */
+.slide-track {
+    display: flex;
+    width: 400%;
+    animation: slide 8s infinite;
+}
+
+/* ===== Each Slide ===== */
+.slide {
+    width: 100%;
+    flex: 1 0 100%;
+}
+
+.slide img {
+    width: 800px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+
+/* ===== Keyframes ===== */
+@keyframes slide {
+
+    /* Image 1 */
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+
+    /* Slide to Image 2 */
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+
+    /* Slide to Image 3 */
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+
+    /* Slide to Image 4 */
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+
+    /* Reset */
+    100% { transform: translateX(0); }
+}

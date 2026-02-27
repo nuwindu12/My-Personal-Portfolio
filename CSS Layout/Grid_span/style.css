@@ -1,0 +1,31 @@
+body{
+    font-family: Arial;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-column: span 2 ;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+.box{
+    padding: 40px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+
+}
+ /* Two Colors */
+.blue{
+    background-color: blue;
+}
+.orange{
+    background-color: orange;
+}
+/* Important Part  */
+.blue2{
+    background-color: blue;
+    grid-column: span 2 ;
+
+}
